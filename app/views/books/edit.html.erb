@@ -1,0 +1,26 @@
+<body>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="top-massage col-md-offset-3 col-md-6">
+						<h2>Editing Book</h2>
+						<%= form_for(@book) do |f| %>
+						<div class="field row">
+							<label>Title</label><br>
+							<%= f.text_field :title, class:'col-xs-12 book_title' %><br>
+							<label>Option</label><br>
+							<%= f.text_area :body, class:'col-xs-12 book_title' %><br>
+							<br>
+							<%= f.submit 'Update Book', class:"btn btn-primary col-xs-12" %><br>
+						<% end %>
+
+							<%= link_to "Show", :back %> |
+							<%= link_to "back", books_path %>
+						</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+</body>

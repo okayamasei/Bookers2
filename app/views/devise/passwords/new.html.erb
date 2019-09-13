@@ -1,0 +1,32 @@
+<body>
+  <main>
+
+  	<div class="body">
+      <div class="container">
+
+        <p id="notice"></p>
+
+
+      	<h2>Forgot your password?</h2>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
+
+
+          <div class="field">
+            <%= f.label :email %><br>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div><br>
+
+            <div class="actions">
+              <input type="submit" name="commit" value="Send me reset password instructions" class="btn btn-danger" data-disable-with="Send me reset password instructions">
+            </div>
+          <% end %>
+            <a class="sign_in" href="/users/sign_in">Log in</a><br>
+
+            <a class="sign_up" href="/users/sign_up">Sign up</a><br>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
